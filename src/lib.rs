@@ -313,4 +313,15 @@ where
             }
         }
     }
+
+    ///
+    /// Configure the frame rate.
+    /// # Arguments
+    ///
+    /// * `rtna` - RTNA value as defined in the datasheet.
+    ///
+    pub fn set_frame_rate(&mut self, rtna: u8) -> Result<(), Error<PinE>> {
+        self.write_command(Instruction::FRCTRL2)?;
+        self.write_data(&[rtna & 0x1f])
+    }
 }

@@ -25,4 +25,5 @@ pub enum Instruction {
     VSCAD = 0x37,
     COLMOD = 0x3A,
     VCMOFSET = 0xC5,
+    FRCTRL2 = 0xC6,
 }
